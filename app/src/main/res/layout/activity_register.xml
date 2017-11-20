@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffff00">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="1dp">
+
+        <TextView
+            android:id="@+id/firstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:textSize="20sp"
+            android:text="@string/fName"
+            android:textColor="#000"/>
+
+        <EditText
+            android:id="@+id/inF"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="100dp"
+            android:layout_weight="0.43"
+            android:ems="10"
+           />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="1dp">
+
+        <TextView
+            android:id="@+id/lastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:textSize="20sp"
+            android:text="@string/lName"
+            android:textColor="#000"/>
+
+        <EditText
+            android:id="@+id/inL"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="100dp"
+            android:layout_weight="0.43"
+            android:ems="10"
+            />
+    </LinearLayout>
+
+    <RadioGroup
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="300dp"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Male" />
+
+        <RadioButton
+
+            android:id="@+id/radioButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Female" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bottum"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="400dp"
+        android:background="#0000ff"/>
+
+
+</FrameLayout>

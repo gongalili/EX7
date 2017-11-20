@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">EX7</string>
+    <string name="into">Hello, this app wil demonstrate the transfer to a second activity and sending results back to this one. Press the button start</string>
+    <string name="buttomtxt">Register</string>
+    <string name="fName">First name:</string>
+    <string name="lName">Last name:</string>
+    <string name="bottum">Send Back</string>
+</resources>
