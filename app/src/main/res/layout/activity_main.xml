@@ -23,7 +23,8 @@
         android:gravity="center"
         android:layout_marginTop="41dp"
         android:layout_below="@+id/intro"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="sendMessage"/>
 
     <View
         android:id="@+id/line"
