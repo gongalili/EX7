@@ -25,13 +25,17 @@ public class RegisterActivity extends Activity {
         // get the text from the EditText
         EditText firstName = (EditText) findViewById(R.id.inF);
         EditText lastName = (EditText) findViewById(R.id.inL);
-        
+        RadioGroup rg = (RadioGroup) findViewById(R.id.rg);
+        int gender = rg.getCheckedRadioButtonId();
+        RadioButton rb = (RadioButton) findViewById(gender);
+        String genderS = rb.getText().toString();
         String stringToPassBack = firstName.getText().toString();
         String stringToPassBack2 = lastName.getText().toString();
         // put the String to pass back into an Intent and close this activity
         Intent intent = new Intent();
         intent.putExtra("firstName", stringToPassBack);
         intent.putExtra("lastName", stringToPassBack2);
+        intent.putExtra("gender", genderS);
         setResult(RESULT_OK, intent);
         finish();
     }

@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
@@ -24,17 +25,28 @@ public class MainActivity extends Activity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data)
     {
         super.onActivityResult(requestCode, resultCode, data);
-            if (resultCode == RESULT_OK) { // Activity.RESULT_OK
+        if (requestCode == 1)
+        {
+            if (resultCode == RESULT_OK)
+            {
+                String gender;
 
-                // get String data from Intent
-                String returnString = data.getStringExtra("firstName");
-                String returnString2 = data.getStringExtra("lastName");
+                if(data.getStringExtra("gender").compareTo("Male") == 0)
+                {
+                    gender = "Mr. ";
+                }
+                else
+                {
+                    gender = "Ms. ";
+                }
+                String returnString = "Welcome back " + gender + " " + data.getStringExtra("firstName") + ", " + data.getStringExtra("lastName");
 
-                // set text view with string
+
                 TextView textView = (TextView) findViewById(R.id.intro);
-
+                Button b = (Button) findViewById(R.id.button);
+                b.setText("again..");
                 textView.setText(returnString);
             }
-
+        }
     }
 }
