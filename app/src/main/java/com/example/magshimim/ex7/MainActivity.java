@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
-
+    final int CHECK = 1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,7 +17,7 @@ public class MainActivity extends Activity {
     public void sendMessage(View view)
     {
         Intent intent = new Intent(this,RegisterActivity.class);
-        startActivityForResult(intent,1);
+        startActivityForResult(intent,CHECK);
 
     }
 
@@ -25,7 +25,7 @@ public class MainActivity extends Activity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data)
     {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == 1)
+        if (requestCode == CHECK)
         {
             if (resultCode == RESULT_OK)
             {
