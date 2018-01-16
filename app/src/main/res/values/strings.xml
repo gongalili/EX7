@@ -5,4 +5,8 @@
     <string name="fName">First name:</string>
     <string name="lName">Last name:</string>
     <string name="bottum">Send Back</string>
+    <string name="after">Welcome back %1$s %2$s, %3$s</string>
+    <string name="man">Mr. </string>
+    <string name="woman">Ms. </string>
+    <string name="again">again...</string>
 </resources>

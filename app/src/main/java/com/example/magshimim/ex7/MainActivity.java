@@ -2,6 +2,7 @@ package com.example.magshimim.ex7;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -25,6 +26,7 @@ public class MainActivity extends Activity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data)
     {
         super.onActivityResult(requestCode, resultCode, data);
+        Resources r = getResources();
         if (requestCode == CHECK)
         {
             if (resultCode == RESULT_OK)
@@ -33,18 +35,18 @@ public class MainActivity extends Activity {
 
                 if(data.getStringExtra("gender").compareTo("Male") == 0)
                 {
-                    gender = "Mr. ";
+                    gender = r.getString(R.string.man);
                 }
                 else
                 {
-                    gender = "Ms. ";
+                    gender = r.getString(R.string.woman);
                 }
-                String returnString = "Welcome back " + gender + " " + data.getStringExtra("firstName") + ", " + data.getStringExtra("lastName");
+                String returnString = r.getString(R.string.after, (gender), (data.getStringExtra("firstName")), (data.getStringExtra("lastName"))); //"Welcome back " + gender + " " + data.getStringExtra("firstName") + ", " + data.getStringExtra("lastName");
 
 
                 TextView textView = (TextView) findViewById(R.id.intro);
                 Button b = (Button) findViewById(R.id.button);
-                b.setText("again..");
+                b.setText(r.getString(R.string.again));
                 textView.setText(returnString);
             }
         }
